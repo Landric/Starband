@@ -12,7 +12,7 @@ import flixel.util.FlxRandom;
     public var jump:Int;
     public var hardpoints:Array<Hardpoint>;
 
-    public function new(size:Int, health:Int, max_speed:Int, jump:Int, hardpoints:Array<Hardpoint>){
+    public function new(designation:String, cat:String, size:Int, health:Int, max_speed:Int, jump:Int, hardpoints:Array<Hardpoint>){
     	this.size = size;
     	this.health = health;
     	this.max_speed = max_speed;
@@ -22,6 +22,14 @@ import flixel.util.FlxRandom;
 }
 
 class Capital extends Ship {
+
+    public function new(designation:String, cat:String){
+        super()
+    }
+
+    public function new(){
+        this();
+    }
 
 }
 

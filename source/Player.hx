@@ -10,7 +10,7 @@ import Config.Keys;
 
 class Player extends FlxSprite{
 	
-	private var speed:Float = 150;    
+	private var speed:Float = 10;    
 
 	public function new(X:Float=0, Y:Float=0){
 		super(X, Y);
@@ -52,7 +52,10 @@ class Player extends FlxSprite{
 			else if (right)
 				mA = 0;
 
-			FlxAngle.rotatePoint(speed, 0, 0, 0, mA, acceleration);
+
+			
+			if (velocity != maxVelocity)
+				acceleration.addPoint(FlxAngle.rotatePoint(speed, 0, 0, 0, mA));
  		}
 	}
 
