@@ -52,7 +52,7 @@ class Player extends FlxSprite{
 			else if (right)
 				mA = 0;
 
-			FlxAngle.rotatePoint(speed, 0, 0, 0, mA, acceleration);
+			acceleration.add(FlxAngle.rotatePoint(speed, 0, 0, 0, mA));
  		}
 	}
 
