@@ -52,7 +52,6 @@ class Player extends FlxSprite{
 			else if (right)
 				mA = 0;
 
-
 			
 			if (velocity != maxVelocity)
 				acceleration.addPoint(FlxAngle.rotatePoint(speed, 0, 0, 0, mA));
