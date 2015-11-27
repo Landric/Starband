@@ -14,8 +14,8 @@ class Player extends FlxSprite{
 
 	public function new(X:Float=0, Y:Float=0){
 		super(X, Y);
-		drag.x = drag.y = 100;
-		maxVelocity = new FlxPoint(300);
+		drag.x = drag.y = 0;
+		maxVelocity = new FlxPoint(3000);
 		makeGraphic(16, 16, FlxColor.BLUE);
 	}
 
@@ -53,8 +53,7 @@ class Player extends FlxSprite{
 				mA = 0;
 
 			
-			if (velocity != maxVelocity)
-				acceleration.addPoint(FlxAngle.rotatePoint(speed, 0, 0, 0, mA));
+			velocity.addPoint(FlxAngle.rotatePoint(speed, 0, 0, 0, mA));
  		}
 	}
 
